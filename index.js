@@ -25,17 +25,17 @@ module.exports = {
    	this.import('vendor/line-awesome.woff2', {
    		destDir: 'fonts'
    	});
-  	
+
   },
   treeForVendor(vendorTree) {
 
-  	let cssFolder = path.dirname(require.resolve('line-awesome/dist/css/line-awesome.min.css'));
+  	let cssFolder = path.dirname(require.resolve('line-awesome/css/line-awesome.min.css'));
 
   	var lineAwesomeTree = new Funnel(cssFolder, {
       files: ['line-awesome.min.css']
     });
 
-	let fontsFolder = path.dirname(require.resolve('line-awesome/dist/fonts/line-awesome.eot'));
+	let fontsFolder = path.dirname(require.resolve('line-awesome/fonts/line-awesome.eot'));
 
     var fontsTree = new Funnel(fontsFolder, {
     	files: [
